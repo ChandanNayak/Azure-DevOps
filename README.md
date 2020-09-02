@@ -16,8 +16,9 @@ tags: [Data Processing, Data Engineering]
 #### Event Hub
 - Get the event hub Connection String Primary Key (CSPK). This information is available with the team that creates/administers the event hub. The CSPK will look like the following Endpoint=sb://**NAMESPACE**.servicebus.windows.net/;SharedAccessKeyName=**POLICY_NAME**;SharedAccessKey=**POLICY_KEY**;EntityPath=**EVENT_HUB_NAME**
 - Go to the Stream Analyticsjob, create a new Input of type Event Hub. Enter the following values 
+
 |**Input Alias** | User defined name for this input |
-|:--|--:|
+|:--|:--|
 |**Service Bus Namespace** | NAMESPACE from the above string | 
 |**Event Hub name** | EVENT_HUB_NAME from the above string | 
 |**Event Hub policy name** | POLICY_NAME from the above string | 
@@ -27,7 +28,7 @@ tags: [Data Processing, Data Engineering]
 #### Azure Data Lake Storage
 Create a new sink of type ADLS, and enter the following details 
 | **Output Alias** | Choose a friendly name for this output | 
-|:--|--:| 
+|:--|:--| 
 | **Account Name** | ADLS Name | 
 | **Path Prefix Pattern** | Relative path from the root of the ADLS. Also include `{date}` and `{time}` in the path. These help in creating subfolders for the date and the hour within ADLS.| 
 | **Date Format** | YYYY-MM-DD | 
